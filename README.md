@@ -1,7 +1,7 @@
 <h1 align="center">rxweb</h1>
 <h3 align="center">Clean Code. Built with Purpose</h3>
 
-
+[![Build Status](https://dev.azure.com/Codehousetest/Rxweb/_apis/build/status/Rxweb-CI?branchName=master)](https://dev.azure.com/Codehousetest/Rxweb/_build/latest?definitionId=5&branchName=master)
 # Contributing to rxweb framework
 If you are thinking to make rxweb framework better, that's truly great. You can contribute from a single character to core architectural work or significant documentation – all with the goal of making a robust rxweb framework which helps for everyone in their projects. Even if you are don’t feel up to writing code or documentation yet, there are a variety of other ways that you can contribute like reporting issues to testing patches.
 
