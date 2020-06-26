@@ -15,12 +15,36 @@ steps:
   inputs:
     versionSpec: '13.x'
   displayName: 'Install Node.js'
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    workingDir: client-side/angular
+    verbose: false
+- task: Npm@1
+  displayName: 'npm custom'
+  inputs:
+    command: custom
+    workingDir: client-side/angular
+    verbose: false
+    customCommand: 'cache clean --force'
+  enabled: false
+
+- task: Npm@1
+  displayName: 'npm custom'
+  inputs:
+    command: custom
+    workingDir: client-side/angular
+    verbose: false
+    customCommand: 'run build'
+
+- task: ArchiveFiles@2
+  displayName: 'Archive dist directory'
+  inputs:
+    rootFolderOrFile: client-side/angular/dist
+    archiveFile: dist.zip
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: 'dist.zip'
     ArtifactName: 'Rxweb-Clientside-angular'
     publishLocation: 'Container'
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+
