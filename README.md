@@ -1,7 +1,8 @@
 <h1 align="center">rxweb</h1>
 <h3 align="center">Clean Code. Built with Purpose</h3>
 
-[![Build Status](https://dev.azure.com/Codehousetest/Rxweb/_apis/build/status/Rxweb-CI?branchName=master)](https://dev.azure.com/Codehousetest/Rxweb/_build/latest?definitionId=5&branchName=master)
+[![Board Status](https://dev.azure.com/Codehousetest/7c11c591-cc3c-43d4-a9fb-aaad730f7717/b071adbc-1e0a-4bb0-a592-0f811eeed6ce/_apis/work/boardbadge/8e752619-4033-47a3-9507-af9b3e899279)](https://dev.azure.com/Codehousetest/7c11c591-cc3c-43d4-a9fb-aaad730f7717/_boards/board/t/b071adbc-1e0a-4bb0-a592-0f811eeed6ce/Microsoft.RequirementCategory/)
+
 # Contributing to rxweb framework
 If you are thinking to make rxweb framework better, that's truly great. You can contribute from a single character to core architectural work or significant documentation – all with the goal of making a robust rxweb framework which helps for everyone in their projects. Even if you are don’t feel up to writing code or documentation yet, there are a variety of other ways that you can contribute like reporting issues to testing patches.
 
