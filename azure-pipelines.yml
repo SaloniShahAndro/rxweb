@@ -4,43 +4,25 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
-trigger:
-- master
-
 pool:
-  vmImage: 'ubuntu-latest'
-
+  name: Azure Pipelines
 steps:
 - task: NodeTool@0
+  displayName: 'Use Node 12.x'
   inputs:
-    versionSpec: '13.x'
-  displayName: 'Install Node.js'
+    versionSpec: 12.x
+
 - task: Npm@1
   displayName: 'npm install'
   inputs:
-    workingDir: client-side/angular
+    workingDir: 'client-side/angular'
     verbose: false
+
 - task: Npm@1
   displayName: 'npm custom'
   inputs:
     command: custom
-    workingDir: client-side/angular
+    workingDir: 'client-side/angular'
     verbose: false
-    customCommand: 'cache clean --force'
-  enabled: false
-
-- script: cd client-side/angular; npm run test
-  displayName: 'Angular Karma unit tests'
-
-
-- task: ArchiveFiles@2
-  displayName: 'Archive dist directory'
-  inputs:
-    rootFolderOrFile: client-side/angular/dist
-    archiveFile: dist.zip
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: 'dist.zip'
-    ArtifactName: 'Rxweb-Clientside-angular'
-    publishLocation: 'Container'
+    customCommand: 'run test'
 
