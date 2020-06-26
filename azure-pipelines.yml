@@ -29,7 +29,7 @@ steps:
     customCommand: 'cache clean --force'
   enabled: false
 
-- script: cd client-side/angular; npm run test:ci
+- script: cd client-side/angular; npm run test
   displayName: 'Angular Karma unit tests'
 
 
