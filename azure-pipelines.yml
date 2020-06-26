@@ -29,9 +29,14 @@ steps:
     customCommand: 'cache clean --force'
   enabled: false
 
+- task: Npm@1
+  displayName: 'npm custom'
+  inputs:
+    command: custom
+    workingDir: client-side/angular
+    verbose: true
+    customCommand: 'run test rxweb --code-coverage --watch=false'
 
-- script: karma test --reporter karma-junit-reporter
-- script: npm test
 
 - task: ArchiveFiles@2
   displayName: 'Archive dist directory'
