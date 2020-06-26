@@ -35,7 +35,7 @@ steps:
     command: custom
     workingDir: client-side/angular
     verbose: true
-    customCommand: 'run build'
+    customCommand: 'run test'
 
 - task: ArchiveFiles@2
   displayName: 'Archive dist directory'
